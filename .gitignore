@@ -81,4 +81,4 @@ Desktop.ini
 *.iws
 
 # db
-*.db
+*.db*
