@@ -1,0 +1,81 @@
+# Build Folders (you can edit these to match your project structure)
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# DotNet specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.nuspec
+project.assets.json
+
+# Entity Framework
+*.edmx.diagram
+*.edmx.sql
+*.edmx
+
+# Azure
+.localhistory/
+*.publishsettings
+*.azurePubxml
+*.azurePubxml.user
+
+# Resharper
+_ReSharper*/
+*.[Rr]e[Ss]harper
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux files
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+*.orig
+*.tlog
+*.log
+
+# IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
