@@ -1,10 +1,24 @@
-var builder = WebApplication.CreateBuilder(args); // Create a builder for the web application
-var app = builder.Build(); // Build the web application
+var builder = WebApplication.CreateBuilder(args); 
+var app = builder.Build(); 
 
-app.MapGet("/", () => "Hello World!"); // Map a GET request to the root URL to return "Hello World!"
+app.MapGet("/", () => {
+    return Results.Ok("Hello World"); // Return a 200 OK response
+}); 
 
-// If I try to call the route GET /banana -> 404 not found cause I did not map this route
-// () => "Hello World!" is a lambda function that returns "Hello World!" when the root URL is accessed (função anônima)
+// Route with a parameter
+// url/name/Julia returns Hello Julia
+app.MapGet("name/{nome}", (string nome) => {
+    return Results.Ok($"Hello {nome}"); // Return a 200 OK response
+}); 
 
-app.MapGet("/banana", () => "Hello Banana!"); // Map a GET request to the /banana URL to return "Hello Banana!"
+app.MapPost("/", (User user) => { 
+    return Results.Ok(user); // Return a 200 OK response with the user object (JSON -> object: serialization; object -> JSON: deserialization)
+});
+
 app.Run(); // Run the web application
+
+public class User 
+{
+    public int Id { get; set; } 
+    public string Username { get; set; } = string.Empty; 
+}
