@@ -1,8 +1,9 @@
 var builder = WebApplication.CreateBuilder(args); 
+
+builder.Services.AddControllers();
+
 var app = builder.Build(); 
 
-app.MapGet("/", () => {
-    return Results.Ok("Hello World"); // Return a 200 OK response
-}); 
+app.MapControllers();
 
 app.Run(); // Run the web application
